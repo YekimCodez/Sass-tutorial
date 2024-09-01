@@ -1,0 +1,36 @@
+@import './resets';
+@import './variables';
+@import './maps';
+
+// function
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+
+
+body {
+    background-color: $secondary-color;
+    font-weight: map-get($font-weights, bold);
+    color: $primary-color;
+    font-family: map-get($font-families, third);
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+
+    h1 {
+        text-align: center;
+        font-weight: weight(bold);
+    }
+
+    #{&}-paragraph {
+        font-weight: weight(normal);
+        font-size: map-get($font-sizes, normal);
+
+        &:hover {
+            color: $main-font-color;
+        }
+    }
+}
