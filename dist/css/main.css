@@ -28,4 +28,9 @@ body {
 }
 .main .main-paragraph:hover {
   color: rgb(216, 235, 241);
+}
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=main.css.map */
