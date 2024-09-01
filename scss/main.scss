@@ -7,6 +7,14 @@
     @return map-get($font-weights, $weight-name);
 }
 
+// Mixin
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
 
 
 body {
@@ -17,9 +25,7 @@ body {
 }
 
 .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter(row);
     width: 80%;
     margin: 0 auto;
 
